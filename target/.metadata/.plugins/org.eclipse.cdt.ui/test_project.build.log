@@ -1,0 +1,9 @@
+17:17:40 **** Clean-only build of configuration Debug for project test_project ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f072rbtx.d ./Startup/startup_stm32f072rbtx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf default.size.stdout test_project.elf test_project.list test_project.map
+ 
+
+17:17:42 Build Finished. 0 errors, 0 warnings. (took 1s.409ms)
+

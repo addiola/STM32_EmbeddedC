@@ -1,0 +1,19 @@
+17:53:28 **** Incremental Build of configuration Debug for project Hello World ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m0 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f072rbtx.d" -MT"Startup/startup_stm32f072rbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f072rbtx.o" "../Startup/startup_stm32f072rbtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F0 -DSTM32F072RBTx -DSTM32F072B_DISCO -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F0 -DSTM32F072RBTx -DSTM32F072B_DISCO -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Hello World.elf" @"objects.list"   -mcpu=cortex-m0 -T"G:\Embedded C\My_workspace\target\Hello World\STM32F072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Hello World.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Hello World.elf
+ 
+arm-none-eabi-size   Hello\ World.elf 
+arm-none-eabi-objdump -h -S  Hello\ World.elf  > "Hello World.list"
+   text	   data	    bss	    dec	    hex	filename
+   4796	    116	   1756	   6668	   1a0c	Hello World.elf
+Finished building: default.size.stdout
+ 
+Finished building: Hello World.list
+ 
+
+17:53:30 Build Finished. 0 errors, 0 warnings. (took 1s.777ms)
+
